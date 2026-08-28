@@ -1,0 +1,35 @@
+### logs options
+ckpt_path: "/home/emognition/Desktop/ppg-ssl/downstream_tasks/experiments_temp/larfield_emo/checkpoints"
+log_path: "/home/emognition/Desktop/ppg-ssl/downstream_tasks/experiments_temp/larfield_emo/logs"
+run_name: "run_1"
+
+
+### dataset options
+dataset: "larfieldemo"
+dataset_dir: "/home/emognition/Desktop/LarField/test_dataset_emo_ppg/final_dataset/"
+task: "intense_emotion"
+task_type_regression: False
+
+
+### training options
+batch_size: 128
+max_epochs: 200
+learning_rate: 0.0005
+weight_decay: 3e-4
+fold_type: "LOSO" # LKSO
+# num_folds value is a number of folds to prepare - not a number of subjects to exclude for testing
+num_folds: 12
+validation_size: 4
+
+
+### model options
+experiment_name: "ts_tcc_Larfield_initial_unimodal_fusion"
+modalities_model_names:
+  "ECG": "ts_tcc_Larfield_initial_unimodal_ecg"
+  "ACC": "ts_tcc_Larfield_initial_unimodal_acc"
+use_backbone: True
+encoder_from_scratch: False
+backbone_fine_tuning_strategy: "freeze"
+classificationHead: "ClassificationHeadMLP"
+#optimizer: "Adam" # todo: not handled in code
+fusion_strategy: "mean"
