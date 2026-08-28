@@ -1,0 +1,32 @@
+LOSO: true
+across_time: true
+backbone_fine_tuning_strategy: freeze
+batch_size: 128
+ckpt_path: /home/emognition/Desktop/ppg-ssl/downstream_tasks/experiments/larfield_emo/checkpoints
+classificationHead: ClassificationHeadMLP
+cold_start: true
+config: ''
+dataset: larfieldemo
+dataset_dir: /home/emognition/Desktop/LarField/test_dataset_emo_ppg/final_dataset/
+encoder_from_scratch: true
+experiment_name: larfield_ppg_10_sec_full_3e_3_26
+fold_type: LOSO
+fusion_strategy: mean
+is_multimodal: false
+learning_rate: 0.0005
+log_path: /home/emognition/Desktop/ppg-ssl/downstream_tasks/experiments/larfield_emo/logs
+max_epochs: 200
+modalities:
+- PPG
+modalities_model_names:
+  PPG: larfield_ppg_10_sec_full_3e_3_26
+num_folds: 12
+output_dim: 2
+projection_dim: 128
+run_name: run_1
+task: intense_emotion
+task_type_regression: false
+train_size_ablation: 100
+use_backbone: true
+validation_size: 4
+weight_decay: 3e-4
