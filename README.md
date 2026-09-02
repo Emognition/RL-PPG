@@ -3,7 +3,7 @@
 
 #### Authors: Dominika Kunc, Przemysław Kazienko, and Stanisław Saganowski
 
-
+#### 🔗 [Preprint](https://arxiv.org/pdf/2608.14675)
 ## 🛠 Setup & Installation
 
 We recommend using Conda to manage your environment.
